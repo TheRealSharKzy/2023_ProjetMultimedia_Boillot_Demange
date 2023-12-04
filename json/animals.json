@@ -6,20 +6,45 @@
             "languages" :[
                 {
                     "language" : "english",
+                    "languageCode" : "en-US",
                     "traduction" : "cat"
                 },
                 {
                     "language" : "spanish",
+                    "languageCode" : "es-ES",
                     "traduction" : "gato"
                 },
                 {
-                      "language" : "french",
-                      "traduction" : "chat"
+                    "language" : "french",
+                    "languageCode" : "fr-FR",
+                    "traduction" : "chat"
                 },
                 {
-                      "language" : "italian",
-                      "traduction" : "gatto"
-                }]
+                    "language" : "italian",
+                    "languageCode" : "it-IT",
+                    "traduction" : "gatto"
+                },
+                {
+                    "language" : "german",
+                    "languageCode" : "de-DE",
+                    "traduction" : "katze"
+                },
+                {
+                    "language" : "portuguese",
+                    "languageCode" : "pt-PT",
+                    "traduction" : "gato"
+                },
+                {
+                    "language": "chinese",
+                    "languageCode": "zh-CN",
+                    "traduction": "mao"
+                },
+                {
+                    "language": "japanese",
+                    "languageCode": "ja-JP",
+                    "traduction": "neko"
+                }
+            ]
         },
         {
             "name" : "Butterfly",
@@ -27,20 +52,45 @@
             "languages" : [
                 {
                     "language" : "english",
+                    "languageCode" : "en-US",
                     "traduction" : "butterfly"
                 },
                 {
                     "language" : "spanish",
+                    "languageCode" : "es-ES",
                     "traduction" : "mariposa"
                 },
                 {
                       "language" : "french",
+                      "languageCode" : "fr-FR",
                       "traduction" : "papillon"
                 },
                 {
                       "language" : "italian",
+                      "languageCode" : "it-IT",
                       "traduction" : "farfalla"
-                }]
+                },
+                {
+                      "language" : "german",
+                      "languageCode" : "de-DE",
+                      "traduction" : "schmetterling"
+                },
+                {
+                      "language" : "portuguese",
+                      "languageCode" : "pt-PT",
+                      "traduction" : "borboleta"
+                },
+                {
+                      "language": "chinese",
+                      "languageCode": "zh-CN",
+                      "traduction": "hudie"
+                },
+                {
+                      "language": "japanese",
+                      "languageCode": "ja-JP",
+                      "traduction": "chou"
+                }
+            ]
         },
         {
             "name" : "Camel",
@@ -48,20 +98,45 @@
             "languages" : [
                 {
                     "language" : "english",
+                    "languageCode" : "en-US",
                     "traduction" : "camel"
                 },
                 {
                     "language" : "spanish",
+                    "languageCode" : "es-ES",
                     "traduction" : "camello"
                 },
                 {
                       "language" : "french",
+                      "languageCode" : "fr-FR",
                       "traduction" : "chameau"
                 },
                 {
                       "language" : "italian",
+                      "languageCode" : "it-IT",
                       "traduction" : "cammello"
-                }]
+                },
+                {
+                      "language" : "german",
+                      "languageCode" : "de-DE",
+                      "traduction" : "kamel"
+                },
+                {
+                      "language" : "portuguese",
+                      "languageCode" : "pt-PT",
+                      "traduction" : "camelo"
+                },
+                {
+                      "language": "chinese",
+                      "languageCode": "zh-CN",
+                      "traduction": "luotuo"
+                },
+                {
+                      "language": "japanese",
+                      "languageCode": "ja-JP",
+                      "traduction": "rakuda"
+                }
+            ]
         },
         {
             "name" : "Horse",
@@ -69,20 +144,45 @@
             "languages" : [
                 {
                     "language" : "english",
+                    "languageCode" : "en-US",
                     "traduction" : "horse"
                 },
                 {
                     "language" : "spanish",
+                    "languageCode" : "es-ES",
                     "traduction" : "caballo"
                 },
                 {
                       "language" : "french",
+                      "languageCode" : "fr-FR",
                       "traduction" : "cheval"
                 },
                 {
                       "language" : "italian",
+                      "languageCode" : "it-IT",
                       "traduction" : "cavallo"
-                }]
+                },
+                {
+                      "language" : "german",
+                      "languageCode" : "de-DE",
+                      "traduction" : "pferd"
+                },
+                {
+                      "language" : "portuguese",
+                      "languageCode" : "pt-PT",
+                      "traduction" : "cavalo"
+                },
+                {
+                      "language": "chinese",
+                      "languageCode": "zh-CN",
+                      "traduction": "ma"
+                },
+                {
+                      "language": "japanese",
+                      "languageCode": "ja-JP",
+                      "traduction": "uma"
+                }
+            ]
         },
         {
             "name" : "Cow",
@@ -90,20 +190,45 @@
             "languages" : [
                 {
                     "language" : "english",
+                    "languageCode" : "en-US",
                     "traduction" : "cow"
                 },
                 {
                     "language" : "spanish",
+                    "languageCode" : "es-ES",
                     "traduction" : "vaca"
                 },
                 {
                       "language" : "french",
+                      "languageCode" : "fr-FR",
                       "traduction" : "vache"
                 },
                 {
                       "language" : "italian",
+                      "languageCode" : "it-IT",
                       "traduction" : "mucca"
-                }]
+                },
+                {
+                      "language" : "german",
+                      "languageCode" : "de-DE",
+                      "traduction" : "kuh"
+                },
+                {
+                      "language" : "portuguese",
+                      "languageCode" : "pt-PT",
+                      "traduction" : "vaca"
+                },
+                {
+                      "language": "chinese",
+                      "languageCode": "zh-CN",
+                      "traduction": "niu"
+                },
+                {
+                      "language": "japanese",
+                      "languageCode": "ja-JP",
+                      "traduction": "ushi"
+                }
+            ]
         },
         {
             "name" : "Duck",
@@ -111,20 +236,45 @@
             "languages" : [
                 {
                     "language" : "english",
+                    "languageCode" : "en-US",
                     "traduction" : "duck"
                 },
                 {
                     "language" : "spanish",
+                    "languageCode" : "es-ES",
                     "traduction" : "pato"
                 },
                 {
                       "language" : "french",
+                      "languageCode" : "fr-FR",
                       "traduction" : "canard"
                 },
                 {
                       "language" : "italian",
+                      "languageCode" : "it-IT",
                       "traduction" : "anatra"
-                }]
+                },
+                {
+                      "language" : "german",
+                      "languageCode" : "de-DE",
+                      "traduction" : "ente"
+                },
+                {
+                      "language" : "portuguese",
+                      "languageCode" : "pt-PT",
+                      "traduction" : "pato"
+                },
+                {
+                      "language": "chinese",
+                      "languageCode": "zh-CN",
+                      "traduction": "ya"
+                },
+                {
+                      "language": "japanese",
+                      "languageCode": "ja-JP",
+                      "traduction": "kamo"
+                }
+            ]
         },
         {
             "name": "Elephant",
@@ -132,19 +282,43 @@
             "languages": [
               {
                 "language": "english",
+                "languageCode" : "en-US",
                 "traduction": "elephant"
               },
               {
                 "language": "spanish",
+                "languageCode" : "es-ES",
                 "traduction": "elefante"
               },
               {
                 "language": "french",
+                "languageCode" : "fr-FR",
                 "traduction": "elephant"
               },
               {
                 "language": "italian",
+                "languageCode" : "it-IT",
                 "traduction": "elefante"
+              },
+              {
+                  "language": "german",
+                  "languageCode" : "de-DE",
+                  "traduction": "elefant"
+              },
+              {
+                  "language": "portuguese",
+                  "languageCode" : "pt-PT",
+                  "traduction": "elefante"
+              },
+              {
+                  "language": "chinese",
+                  "languageCode": "zh-CN",
+                  "traduction": "xiang"
+              },
+              {
+                  "language": "japanese",
+                  "languageCode": "ja-JP",
+                  "traduction": "zou"
               }
             ]
           },
@@ -154,19 +328,43 @@
             "languages": [
               {
                 "language": "english",
+                "languageCode" : "en-US",
                 "traduction": "frog"
               },
               {
                 "language": "spanish",
+                "languageCode" : "es-ES",
                 "traduction": "rana"
               },
               {
                 "language": "french",
+                "languageCode" : "fr-FR",
                 "traduction": "grenouille"
               },
               {
                 "language": "italian",
+                "languageCode" : "it-IT",
                 "traduction": "rana"
+              },
+              {
+                  "language": "german",
+                  "languageCode" : "de-DE",
+                  "traduction": "frosch"
+              },
+              {
+                  "language": "portuguese",
+                  "languageCode" : "pt-PT",
+                  "traduction": "sapo"
+              },
+              {
+                  "language": "chinese",
+                  "languageCode": "zh-CN",
+                  "traduction": "qingwa"
+              },
+              {
+                  "language": "japanese",
+                  "languageCode": "ja-JP",
+                  "traduction": "kaeru"
               }
             ]
           }
