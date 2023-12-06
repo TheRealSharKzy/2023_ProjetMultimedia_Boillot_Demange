@@ -1,18 +1,16 @@
+
+//Il y a surement un moyen d'enlever ces variables mais j'ai pas trouvé
 let currAnimalRecognitionGame;
 let animalList = [];
-let datas;
+let nbTimesClicked = 0;
 
 window.addEventListener("load", async () => {
     // source of data
     let raw_data = await fetch('json/animalsTranslation.json').then((response) => response.json());
-    datas = raw_data;
+    let datas = raw_data;
     writeLanguagesList(Object.keys(raw_data))
-    //constructAnimalList(jsonData);
+    let language = "english"
 
-
-    //     }).catch(function (error) {
-    //     console.log(error);
-    // });
 
     /**
      * @type {HTMLSelectElement}
@@ -20,10 +18,19 @@ window.addEventListener("load", async () => {
     let selector = document.getElementById("language_select");
 
     window.addEventListener("input", () => {
-        let language = selector.value
+        // Je suis pas sûr que la voix change (à revoir)
+        language = selector.value
         let translations = datas[language]
-        constructAnimalList(translations)
+        constructAnimalList(translations, language)
     })
+
+    // Game 1 = training
+    let game1 = document.getElementById("game1")
+    game1.addEventListener("click",() => changeGame("training", datas, language));
+
+    // Game 2 = Recognition game
+    let game2 = document.getElementById("game2")
+    game2.addEventListener("click",() => changeGame("recognition", datas, language));
 })
 
 /**
@@ -58,43 +65,71 @@ function speech(words){
     window.speechSynthesis.speak(msg);
 }
 
-function constructAnimalList(jsonData){
+function constructAnimalList(jsonData, language, game = "training"){
     let grid = document.getElementById("grid")
+    let i = 1
     grid.innerHTML = ""
+    animalList = [];
 
     for (const current of jsonData.animals) {
         animalList.push(current.name);
+
         let imgElement = document.createElement("img");
         imgElement.src = current.path
-        imgElement.addEventListener("click", () => speechAnimalName(current.translation, current.languageCode))
+        imgElement.id = "img" + i++;
+        if (game === "training" ) imgElement.addEventListener("click", () => speechAnimalName(current.translation, current.languageCode))
+        else imgElement.addEventListener("click", () => recognitionGameClick(current.name, language, jsonData))
         grid.appendChild(imgElement)
     }
 }
 
-function getAnimalLanguages(animal){
-    for (let i = 0; i<datas.animals.size;i++){
-        let current = datas.animals[i];
+// Donne la traduction de l'animal dans la langue courante
+function getAnimalTranslation(animal, languages){
+    for (let i = 0; i<languages.animals.length;i++){
+        let current = languages.animals[i];
         if (current.name === animal){
-            return current.languages;
+            return current.translation;
         }
     }
 }
 
-function recognitionGameStart(animalList){
-    currAnimalRecognitionGame = animalList[Math.round(Math.random()*animalList.size)];
-    let languages = getAnimalLanguages(currAnimalRecognitionGame);
-    let pronunciation = getAnimalPronunciationByLanguage(languages);
-    speechAnimalName(pronunciation);
+// Lance le jeu de reconnaissance
+function recognitionGameStart(jsonData){
+    // Animal aléatoirement pris dans la liste
+    currAnimalRecognitionGame = animalList[Math.round(Math.random()*animalList.length - 1)];
+    // Traduction de l'animal choisi aléatoirement avec la langue choisi
+    let translation = getAnimalTranslation(currAnimalRecognitionGame, jsonData)
+    speechAnimalName(translation);
 }
 
-function recognitionGameClick(animalClicked){
+// Quand on est dans le jeu de reconnaissance et que l'on clique sur une image
+function recognitionGameClick(animalClicked,language, jsonData){
     if (animalClicked === currAnimalRecognitionGame){
+        nbTimesClicked = 0;
         speech("You win");
-        recognitionGameStart(animalList);
+        //Quand on gagne on relance une partie
+        // Peut-être mettre un délai avant de relancer la partie
+        recognitionGameStart(jsonData);
     } else {
-        speech("You lose but you can retry");
-        speechAnimalName(currAnimalRecognitionGame);
+        //Mettre les cases en sur lesquels on a cliqué mais ne sont pas bonnes en rouge
+        nbTimesClicked++
+        // Je laisse 3 essais
+        if (nbTimesClicked<3) {
+            speech("You lose but you can retry");
+            speechAnimalName(currAnimalRecognitionGame);
+        } else {
+            speech("You lost completely. The good answer was")
+            // Mettre en vert la bonne case
+            // Attendre quelques secondes
+            recognitionGameStart(jsonData)
+        }
     }
+}
+
+// Change l'event en fonction du jeu et la jeu de reconnaissance si jamais
+function changeGame(game, jsonData, language){
+    constructAnimalList(jsonData[language],language, game);
+    if (game === "recognition") recognitionGameStart(jsonData[language])
 }
 
 /**
