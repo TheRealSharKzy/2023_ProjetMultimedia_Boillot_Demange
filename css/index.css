@@ -13,11 +13,12 @@ header {
         color: white;
         font-size: 1em;
         background-color: teal;
-        width: 15%;
+        min-width: fit-content;
+        width: 15vw;
         border-radius: 4px;
         border: none;
         margin: auto 0;
-        padding: 0.5%;
+        padding: 1vh;
     }
 }
 
@@ -26,7 +27,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: normal;
-    height: 8vh;
+    padding-block: 5px;
     span {
         /*background: #eeeeee;*/
         color: white;
@@ -35,7 +36,6 @@ nav {
         margin-left: 10px;
         padding: 2px 5px;
         border-radius: 7px;
-
     }
 }
 
@@ -46,8 +46,8 @@ nav {
     #grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10vh 15vh;
-        height: 100%;
+
+        grid-gap: 5vw;
         background: white;
 
         border: solid gray 1px;
@@ -55,9 +55,33 @@ nav {
 
         img {
             border-radius: 5px;
+
+            width: 20vw;
         }
 
         margin: 2% 0;
         padding: 1%;
+    }
+}
+
+@media (max-width: 700px)  {
+    #content {
+        #grid {
+            grid-template-columns: repeat(2, 1fr);
+            img {
+                width: 40vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px)  {
+    #content {
+        #grid {
+            grid-template-columns: 1fr;
+            img {
+                width: 80vw;
+            }
+        }
     }
 }
