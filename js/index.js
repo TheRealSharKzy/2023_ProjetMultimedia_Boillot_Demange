@@ -1,21 +1,52 @@
-let currLanguage = 'english';
 let currAnimalRecognitionGame;
 let animalList = [];
 let datas;
-fetch('json/animals.json')
-    .then(function(text) {
-        return text.json();
-    }
-).then(function(jsonData) {
-    datas = jsonData;
-    constructAnimalList(jsonData);
-}).catch(function(error) {
-    console.log(error);
-});
 
-function speechAnimalName(animal){
+window.addEventListener("load", async () => {
+    // source of data
+    let raw_data = await fetch('json/animalsTranslation2.json').then((response) => response.json());
+    datas = raw_data;
+    writeLanguagesList(Object.keys(raw_data))
+    //constructAnimalList(jsonData);
+
+
+    //     }).catch(function (error) {
+    //     console.log(error);
+    // });
+
+    /**
+     * @type {HTMLSelectElement}
+     */
+    let selector = document.getElementById("language_select");
+
+    window.addEventListener("input", () => {
+        let language = selector.value
+        let translations = datas[language]
+        constructAnimalList(translations)
+    })
+})
+
+/**
+ *
+ * @param languages {string[]}
+ */
+function writeLanguagesList(languages) {
+    /**
+     * @type {HTMLSelectElement}
+     */
+    let selector = document.getElementById("language_select");
+    selector.innerHTML = ""
+    for (let lang of languages) {
+        let optionElement = document.createElement("option");
+        optionElement.text = lang
+        selector.appendChild(optionElement)
+    }
+
+}
+
+function speechAnimalName(animal, language = "english"){
     const msg = new SpeechSynthesisUtterance(animal);
-    msg.lang = currLanguage;
+    msg.lang = language;
     msg.rate = 0.8;
     window.speechSynthesis.speak(msg);
 }
@@ -29,19 +60,14 @@ function speech(words){
 
 function constructAnimalList(jsonData){
     let grid = document.getElementById("grid")
-    let elements = "";
-    for (let i = 0; i < 6; i++) {
-        let current =  jsonData.animals[i];
-        animalList.push(current.name);
-        let currentAnimalPrononciation = getAnimalPronunciationByLanguage(current.languages)
-        elements += `<img src='${current.path}' class="grid-item" onclick=speechAnimalName("${currentAnimalPrononciation}")>`
-    }
-    grid.innerHTML = elements;
-}
+    grid.innerHTML = ""
 
-function getAnimalPronunciationByLanguage(languages){
-    for (let i= 0; i < languages.length; i++) {
-        if (languages[i].language === currLanguage) return languages[i].traduction;
+    for (const current of jsonData.animals) {
+        animalList.push(current.name);
+        let imgElement = document.createElement("img");
+        imgElement.src = current.path
+        imgElement.addEventListener("click", () => speechAnimalName(current.translation, current.languageCode))
+        grid.appendChild(imgElement)
     }
 }
 
@@ -69,6 +95,15 @@ function recognitionGameClick(animalClicked){
         speech("You lose but you can retry");
         speechAnimalName(currAnimalRecognitionGame);
     }
+}
+
+/**
+ *
+ * @param event {Event}
+ */
+function refreshLanguage(event) {
+    let target = event.target;
+    console.log(target.value)
 }
 
 
