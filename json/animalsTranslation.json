@@ -15,7 +15,7 @@
       },
       {
         "name": "Camel",
-        "translation": "Camello",
+        "translation": "camello",
         "path": "image/Camel.png"
       },
       {
@@ -81,7 +81,7 @@
       },
       {
         "name": "Elephant",
-        "translation": "\u00e9l\u00e9phant",
+        "translation": "éléphant",
         "path": "image/Elephant.png"
       },
       {
@@ -224,7 +224,7 @@
       },
       {
         "name": "Frog",
-        "translation": "r\u00e3",
+        "translation": "rã",
         "path": "image/Frog.png"
       }
     ]

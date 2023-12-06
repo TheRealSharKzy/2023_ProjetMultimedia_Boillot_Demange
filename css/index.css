@@ -29,13 +29,17 @@ nav {
     justify-content: normal;
     padding-block: 5px;
     span {
-        /*background: #eeeeee;*/
         color: white;
         font-size: 1.125rem;
         font-weight: bold;
         margin-left: 10px;
         padding: 2px 5px;
         border-radius: 7px;
+    }
+
+    .selected {
+        background-color: #eeeeee;
+        color: black;
     }
 }
 
@@ -57,6 +61,12 @@ nav {
             border-radius: 5px;
 
             width: 20vw;
+        }
+
+        img.highlight {
+            box-sizing: border-box;
+
+            border: solid darkgreen 5px;
         }
 
         margin: 2% 0;
