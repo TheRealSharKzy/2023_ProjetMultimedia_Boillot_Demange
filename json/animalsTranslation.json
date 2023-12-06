@@ -1,309 +1,370 @@
 {
-  "languages" :
-  [
-    {
-      "language" : "spanish",
-      "languageCode" : "es-ES",
-      "animals" : [
-        {
-          "name" : "Cat",
-          "translation" : "gato"
-        },
-        {
-          "name" : "Butterfly",
-          "translation" : "mariposa"
-        },
-        {
-          "name" : "Camel",
-          "translation" : "Camello"
-        },
-        {
-          "name": "Horse",
-          "translation": "caballo"
-        },
-        {
-          "name" : "Cow",
-          "translation" : "vaca"
-        },
-        {
-          "name" : "Duck",
-          "translation" : "pato"
-        },
-        {
-          "name" : "Elephant",
-          "translation" : "elefante"
-        },
-        {
-          "name" : "Frog",
-          "translation" : "rana"
-        }
-      ]
-    },
-    {
-      "language" : "french",
-      "languageCode" : "fr-FR",
-      "animals" : [
-          {
-            "name" : "Cat",
-            "translation" : "chat"
-          },
-          {
-            "name" : "Butterfly",
-            "translation" : "papillon"
-          },
-          {
-            "name" : "Camel",
-            "translation" : "chameau"
-          },
-          {
-            "name": "Horse",
-            "translation": "cheval"
-          },
-          {
-            "name" : "Cow",
-            "translation" : "vache"
-          },
-          {
-            "name" : "Duck",
-            "translation" : "canard"
-          },
-          {
-            "name" : "Elephant",
-            "translation" : "éléphant"
-          },
-          {
-            "name" : "Frog",
-            "translation" : "grenouille"
-          }
-      ]
-    },
-    {
-      "language" : "italian",
-      "languageCode" : "it-IT",
-      "animals" : [
-          {
-            "name" : "Cat",
-            "translation" : "gatto"
-          },
-          {
-            "name" : "Butterfly",
-            "translation" : "farfalla"
-          },
-          {
-            "name" : "Camel",
-            "translation" : "cammello"
-          },
-          {
-            "name": "Horse",
-            "translation": "cavallo"
-          },
-          {
-            "name" : "Cow",
-            "translation" : "mucca"
-          },
-          {
-            "name" : "Duck",
-            "translation" : "anatra"
-          },
-          {
-            "name" : "Elephant",
-            "translation" : "elefante"
-          },
-          {
-            "name" : "Frog",
-            "translation" : "rana"
-          }
-      ]
-    },
-    {
-      "language" : "german",
-      "languageCode" : "de-DE",
-      "animals" : [
-        {
-          "name" : "Cat",
-          "translation" : "Katze"
-        },
-        {
-          "name" : "Butterfly",
-          "translation" : "Schmetterling"
-        },
-        {
-          "name" : "Camel",
-          "translation" : "Kamel"
-        },
-        {
-          "name": "Horse",
-          "translation": "Pferd"
-        },
-        {
-          "name" : "Cow",
-          "translation" : "Kuh"
-        },
-        {
-          "name" : "Duck",
-          "translation" : "Ente"
-        },
-        {
-          "name" : "Elephant",
-          "translation" : "Elefant"
-        },
-        {
-          "name" : "Frog",
-          "translation" : "Frosch"
-        }
-      ]
-    },
-    {
-      "language" : "portuguese",
-      "languageCode" : "pt-PT",
-      "animals" : [
-        {
-          "name" : "Cat",
-          "translation" : "gato"
-        },
-        {
-          "name" : "Butterfly",
-          "translation" : "borboleta"
-        },
-        {
-          "name" : "Camel",
-          "translation" : "camelo"
-        },
-        {
-          "name": "Horse",
-          "translation": "cavalo"
-        },
-        {
-          "name" : "Cow",
-          "translation" : "vaca"
-        },
-        {
-          "name" : "Duck",
-          "translation" : "pato"
-        },
-        {
-          "name" : "Elephant",
-          "translation" : "elefante"
-        },
-        {
-          "name" : "Frog",
-          "translation" : "rã"
-        }
-      ]
-    },
-    {
-      "language" : "chinese",
-      "languageCode" : "zh-CN",
-      "animals" : [
-        {
-          "name" : "Cat",
-          "translation" : "mao"
-        },
-        {
-          "name" : "Butterfly",
-          "translation" : "hudie"
-        },
-        {
-          "name" : "Camel",
-          "translation" : "luotuo"
-        },
-        {
-          "name": "Horse",
-          "translation": "ma"
-        },
-        {
-          "name" : "Cow",
-          "translation" : "niu"
-        },
-        {
-          "name" : "Duck",
-          "translation" : "ya"
-        },
-        {
-          "name" : "Elephant",
-          "translation" : "xiang"
-        },
-        {
-          "name" : "Frog",
-          "translation" : "qingwa"
-        }
-      ]
-    },
-    {
-      "language" : "japanese",
-      "languageCode" : "ja-JP",
-      "animals" : [
-        {
-          "name" : "Cat",
-          "translation" : "neko"
-        },
-        {
-          "name" : "Butterfly",
-          "translation" : "chouchou"
-        },
-        {
-          "name" : "Camel",
-          "translation" : "rakuda"
-        },
-        {
-          "name": "Horse",
-          "translation": "uma"
-        },
-        {
-          "name" : "Cow",
-          "translation" : "ushi"
-        },
-        {
-          "name" : "Duck",
-          "translation" : "ahiru"
-        },
-        {
-          "name" : "Elephant",
-          "translation" : "zou"
-        },
-        {
-          "name" : "Frog",
-          "translation" : "kaeru"
-        }
-      ]
-    },
-    {
-      "language" : "english",
-      "languageCode" : "en-US",
-      "animals" : [
-        {
-          "name" : "Cat",
-          "translation" : "cat"
-        },
-        {
-          "name" : "Butterfly",
-          "translation" : "butterfly"
-        },
-        {
-          "name" : "Camel",
-          "translation" : "camel"
-        },
-        {
-          "name": "Horse",
-          "translation": "horse"
-        },
-        {
-          "name" : "Cow",
-          "translation" : "cow"
-        },
-        {
-          "name" : "Duck",
-          "translation" : "duck"
-        },
-        {
-          "name" : "Elephant",
-          "translation" : "elephant"
-        },
-        {
-          "name" : "Frog",
-          "translation" : "frog"
-        }
-      ]
-    }
-  ]
+  "spanish": {
+    "language": "spanish",
+    "languageCode": "es",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "gato",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "mariposa",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "Camello",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "caballo",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "vaca",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "pato",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "elefante",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "rana",
+        "path": "image/Frog.png"
+      }
+    ]
+  },
+  "french": {
+    "language": "french",
+    "languageCode": "fr-FR",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "chat",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "papillon",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "chameau",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "cheval",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "vache",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "canard",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "\u00e9l\u00e9phant",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "grenouille",
+        "path": "image/Frog.png"
+      }
+    ]
+  },
+  "italian": {
+    "language": "italian",
+    "languageCode": "it-IT",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "gatto",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "farfalla",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "cammello",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "cavallo",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "mucca",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "anatra",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "elefante",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "rana",
+        "path": "image/Frog.png"
+      }
+    ]
+  },
+  "german": {
+    "language": "german",
+    "languageCode": "de-DE",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "Katze",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "Schmetterling",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "Kamel",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "Pferd",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "Kuh",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "Ente",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "Elefant",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "Frosch",
+        "path": "image/Frog.png"
+      }
+    ]
+  },
+  "portuguese": {
+    "language": "portuguese",
+    "languageCode": "pt-PT",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "gato",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "borboleta",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "camelo",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "cavalo",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "vaca",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "pato",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "elefante",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "r\u00e3",
+        "path": "image/Frog.png"
+      }
+    ]
+  },
+  "chinese": {
+    "language": "chinese",
+    "languageCode": "zh-CN",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "mao",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "hudie",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "luotuo",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "ma",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "niu",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "ya",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "xiang",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "qingwa",
+        "path": "image/Frog.png"
+      }
+    ]
+  },
+  "japanese": {
+    "language": "japanese",
+    "languageCode": "ja-JP",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "neko",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "chouchou",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "rakuda",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "uma",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "ushi",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "ahiru",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "zou",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "kaeru",
+        "path": "image/Frog.png"
+      }
+    ]
+  },
+  "english": {
+    "language": "english",
+    "languageCode": "en-US",
+    "animals": [
+      {
+        "name": "Cat",
+        "translation": "cat",
+        "path": "image/Cat.png"
+      },
+      {
+        "name": "Butterfly",
+        "translation": "butterfly",
+        "path": "image/Butterfly.png"
+      },
+      {
+        "name": "Camel",
+        "translation": "camel",
+        "path": "image/Camel.png"
+      },
+      {
+        "name": "Horse",
+        "translation": "horse",
+        "path": "image/Horse.png"
+      },
+      {
+        "name": "Cow",
+        "translation": "cow",
+        "path": "image/Cow.png"
+      },
+      {
+        "name": "Duck",
+        "translation": "duck",
+        "path": "image/Duck.png"
+      },
+      {
+        "name": "Elephant",
+        "translation": "elephant",
+        "path": "image/Elephant.png"
+      },
+      {
+        "name": "Frog",
+        "translation": "frog",
+        "path": "image/Frog.png"
+      }
+    ]
+  }
 }

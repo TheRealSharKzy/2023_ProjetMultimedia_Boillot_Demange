@@ -4,7 +4,7 @@ let datas;
 
 window.addEventListener("load", async () => {
     // source of data
-    let raw_data = await fetch('json/animalsTranslation2.json').then((response) => response.json());
+    let raw_data = await fetch('json/animalsTranslation.json').then((response) => response.json());
     datas = raw_data;
     writeLanguagesList(Object.keys(raw_data))
     //constructAnimalList(jsonData);
