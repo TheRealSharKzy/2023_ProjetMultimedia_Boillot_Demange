@@ -53,20 +53,38 @@ window.addEventListener("load", async () => {
     }
 
     function constructElementList(){
-        console.log(data)
-        console.log(language)
         let translations = data[language]
-        grid.innerHTML = ""
 
-        console.log(Object.keys(translations))
-        for (let i = 0; i < translations.elements.length; i++) {
+        for (let i = 0; i < Math.max(translations.elements.length, grid.children.length); i++) {
             const current = translations.elements[i]
+            const currentHtml = grid.children[i]
+            let keep = false;
+            let exist = false;
+            if (currentHtml !== undefined) {
+                if (current === undefined) {
+                    keep = true
+                    currentHtml.remove()
+                }
+                exist = true
+                if (currentHtml.alt === current.alt && currentHtml.src === current.path) {
+                    keep = true
+                }
+            }
 
-            let imgElement = document.createElement("img");
-            imgElement.src = current.path
-            imgElement.addEventListener("click", function (event) {currentGame.onclick(current, event.currentTarget)})
-            translations.elements[i].htmlElement = imgElement
-            grid.appendChild(imgElement)
+            if (!keep) {
+                let imgElement = document.createElement("img");
+                imgElement.src = current.path
+                imgElement.alt = current.name
+                imgElement.addEventListener("click", function (event) {
+                    currentGame.onclick(current, event.currentTarget)
+                })
+                translations.elements[i].htmlElement = imgElement
+                if (exist) {
+                    grid.replaceChild(currentHtml, imgElement)
+                } else {
+                    grid.appendChild(imgElement)
+                }
+            }
         }
     }
 })
@@ -85,6 +103,7 @@ function writeLanguagesList(selector, languages) {
 }
 
 function speech(sentence, languageCode= "en"){
+    // if sentence is a translation object
     if (typeof sentence !== "string")
         if (typeof sentence.translation === "string")
             sentence = sentence.translation
