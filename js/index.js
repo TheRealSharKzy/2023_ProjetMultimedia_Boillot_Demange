@@ -64,10 +64,11 @@ window.addEventListener("load", async () => {
                 if (current === undefined) {
                     keep = true
                     currentHtml.remove()
-                }
-                exist = true
-                if (currentHtml.alt === current.alt && currentHtml.src === current.path) {
-                    keep = true
+                } else {
+                    exist = true
+                    if (currentHtml.alt === current.name && currentHtml.src === current.path) {
+                        keep = true
+                    }
                 }
             }
 
@@ -80,7 +81,7 @@ window.addEventListener("load", async () => {
                 })
                 translations.elements[i].htmlElement = imgElement
                 if (exist) {
-                    grid.replaceChild(currentHtml, imgElement)
+                    grid.replaceChild(imgElement, currentHtml)
                 } else {
                     grid.appendChild(imgElement)
                 }
