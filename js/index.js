@@ -21,7 +21,7 @@ window.addEventListener("load", async () => {
     let listener = () => {
         language = selector.value
 
-        constructAnimalList()
+        constructElementList()
         if (typeof currentGame === "object")
             currentGame = new currentGame.constructor(data[language])
     };
@@ -52,17 +52,20 @@ window.addEventListener("load", async () => {
         if (i === 0) startGame()
     }
 
-    function constructAnimalList(){
+    function constructElementList(){
+        console.log(data)
+        console.log(language)
         let translations = data[language]
         grid.innerHTML = ""
 
-        for (let i = 0; i < translations.animals.length; i++) {
-            const current = translations.animals[i]
+        console.log(Object.keys(translations))
+        for (let i = 0; i < translations.elements.length; i++) {
+            const current = translations.elements[i]
 
             let imgElement = document.createElement("img");
             imgElement.src = current.path
             imgElement.addEventListener("click", function (event) {currentGame.onclick(current, event.currentTarget)})
-            translations.animals[i].htmlElement = imgElement
+            translations.elements[i].htmlElement = imgElement
             grid.appendChild(imgElement)
         }
     }
@@ -100,12 +103,12 @@ LearnGame.prototype.speak = function (text) {
     speech(text, this.languageCode)
 }
 
-LearnGame.prototype.onclick = function (animalClicked, htmlTarget) {
-    this.speak(animalClicked)
+LearnGame.prototype.onclick = function (elementClicked, htmlTarget) {
+    this.speak(elementClicked)
 }
 
 function RecognitionGame(translations) {
-    this.animals = translations.animals
+    this.elements = translations.elements
     this.languageCode = translations.languageCode
     this.refresh()
 }
@@ -113,13 +116,22 @@ RecognitionGame.prototype.speak = function (text) {
     speech(text, this.languageCode)
 }
 RecognitionGame.prototype.refresh = function () {
-    this.currentAnimal = this.animals[Math.floor(Math.random() * this.animals.length)]
+    this.currentElement = this.elements[Math.floor(Math.random() * this.elements.length)]
     this.nbTry = 0;
-    this.speak(this.currentAnimal)
+    this.speak(this.currentElement)
 }
-RecognitionGame.prototype.onclick = function (animalClicked, htmlTarget){
-    if (animalClicked === this.currentAnimal){
+RecognitionGame.prototype.onclick = function (elementClicked, htmlTarget){
+    let htmlElement = this.currentElement.htmlElement
+    if (elementClicked === this.currentElement){
         speech("You win");
+
+        htmlElement.classList.add("highlight")
+        let flash = setInterval(() => htmlElement.classList.toggle("highlight"), 500);
+        setTimeout(() => {
+            clearInterval(flash)
+            htmlElement.classList.remove("highlight")
+        }, 5000)
+
         //Quand on gagne on relance une partie
         // Peut-être mettre un délai avant de relancer la partie
         this.refresh()
@@ -129,27 +141,20 @@ RecognitionGame.prototype.onclick = function (animalClicked, htmlTarget){
         // Je laisse 3 essais
         if (this.nbTry<3) {
             speech("You lose but you can retry");
-            this.speak(this.currentAnimal)
+            this.speak(this.currentElement)
         } else {
-            let htmlElementAnimal = this.currentAnimal.htmlElement
             speech("You lost completely. The good answer was")
-            htmlElementAnimal.classList.add("highlight")
-            let flash = setInterval(() => htmlElementAnimal.classList.toggle("highlight"), 500);
+            htmlElement.classList.add("highlight")
+            let flash = setInterval(() => htmlElement.classList.toggle("highlight"), 500);
             setTimeout(() => {
                 clearInterval(flash)
-                htmlElementAnimal.classList.remove("highlight")
-            }, 5000)
+                htmlElement.classList.remove("highlight")
+            }, 3000)
             // Mettre en vert la bonne case
             // Attendre quelques secondes
             this.refresh()
         }
     }
-}
-
-// Change l'event en fonction du jeu et la jeu de reconnaissance si jamais
-function changeGame(game, jsonData, language){
-    constructAnimalList(jsonData[language],language, game);
-    if (game === "recognition") recognitionGameStart(jsonData[language])
 }
 
 

@@ -2,7 +2,7 @@
   "spanish": {
     "language": "spanish",
     "languageCode": "es",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "gato",
@@ -48,7 +48,7 @@
   "french": {
     "language": "french",
     "languageCode": "fr-FR",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "chat",
@@ -94,7 +94,7 @@
   "italian": {
     "language": "italian",
     "languageCode": "it-IT",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "gatto",
@@ -140,7 +140,7 @@
   "german": {
     "language": "german",
     "languageCode": "de-DE",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "Katze",
@@ -186,7 +186,7 @@
   "portuguese": {
     "language": "portuguese",
     "languageCode": "pt-PT",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "gato",
@@ -232,7 +232,7 @@
   "chinese": {
     "language": "chinese",
     "languageCode": "zh-CN",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "mao",
@@ -278,7 +278,7 @@
   "japanese": {
     "language": "japanese",
     "languageCode": "ja-JP",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "neko",
@@ -324,7 +324,7 @@
   "english": {
     "language": "english",
     "languageCode": "en-US",
-    "animals": [
+    "elements": [
       {
         "name": "Cat",
         "translation": "cat",
